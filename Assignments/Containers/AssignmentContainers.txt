@@ -8,7 +8,7 @@
 
 5 - Create a nginx docker container named mynginx running in background. Pass the parameters to make it liste on port 8080.
 
-6 - Tail the log files of the recently created container.
+6 - Tail the log of the recently created container with follow option.
 
 7 - Go to the nginx URL and look the console output.
 
