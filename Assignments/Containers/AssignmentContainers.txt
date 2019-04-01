@@ -1,0 +1,15 @@
+1 - Create a nginx docker container named mynginx running in foreground. Pass the parameters to remove the container when exited, make it listen on port 8080.
+
+2 - Go to the URL and look for log files in the console output.
+
+3 - Stop the recently created container.
+
+4 - List containers to validate the container is not there any longer.
+
+5 - Create a nginx docker container named mynginx running in background. Pass the parameters to make it liste on port 8080.
+
+6 - Tail the log files of the recently created container.
+
+7 - Go to the nginx URL and look the console output.
+
+8 - Stop and remove the container with a single command.

@@ -1,0 +1,15 @@
+1 - Create a network named mybackend and a network named myfrontend
+
+2 - Create a mysql container, named mysql, with password "mysqlpassword" running on network mybackend
+
+3 - Create a nginx container, named proxy exposing port 8080, running on mybackend network
+
+4 - Create an ngxin container, named frontend exposing port 80, running on myfrontend network
+
+5 - Connect myfrontend network to proxy container
+
+6 - Stop containers
+
+7 - Remove containers
+
+8 - Remove networks
