@@ -1,0 +1,18 @@
+1 - Create 3 directories named content-1, content-2 and content-3
+
+2 - Create an index.html file in each of the directories with the name of the directory:
+  - echo "content-1" > content-1/index.html
+  - echo "content-2" > content-2/index.html
+  - echo "content-3" > content-3/index.html
+
+3 - Create a network named myapp
+
+4 - Create 3 nginx containers in background named app1, app2 and app3 mounting the correspondig directory as bind read-only into /usr/share/nginx/html. The containers should be running on myapp network and should be using a network alias myapp
+
+5 - Create a php container in background named proxy, use the label apache for this container. The container should listen on port 80 mounting the index.php file included here as read-only in /var/www/html/index.php. The container should be running on myapp network
+
+6 - Open the web browser and go to http://localhost. You should verify the 3 containers are getting the appropriate files
+
+7 - Stop and remove all the containers
+
+8 - Remove the myapp network
