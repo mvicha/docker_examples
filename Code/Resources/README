@@ -1,0 +1,16 @@
+# Disable OOM kill, try with a limit of 10m (b, k, m, g)
+docker run --rm -ti --privileged --memory=10m --oom-kill-disable -v /:/rootfs monitoringartist/docker-killer membomb
+
+# Enable OOM kill, try with a limit of 10m
+docker run --rm -ti --privileged --memory=10m -v /:/rootfs monitoringartist/docker-killer membomb
+
+# No CPU limit
+docker run --rm -ti --privileged -v /:/rootfs monitoringartist/docker-killer cpubomb
+
+# CPU limited to 0.5
+docker run --rm -ti --privileged --cpus=0.5 -v /:/rootfs monitoringartist/docker-killer cpubomb
+
+# Break the system
+docker run --rm -ti --privileged --memory=850m --name bomb1 -e TIMEOUT=120 -v /:/rootfs monitoringartist/docker-killer membomb
+docker run --rm -ti --privileged --memory=850m --name bomb2 -e TIMEOUT=120 -v /:/rootfs monitoringartist/docker-killer membomb
+
